@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css'
 
-import Lake from './assets/lake.jpg'
+import TechList from './components/TechList'
 
 function App() {
-  return <img src={Lake} width="200px"/>
+  return <TechList />
 }
 
 export default App;
