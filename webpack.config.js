@@ -19,15 +19,22 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
-      }, {
-        test: /\.css$/, // Todos os arquivos que .css
+      }, 
+      {
+        test: /\.css$/, // Todos os arquivos .css
         exclude: /node_modules/,
         use: [
-          { loader: 'style-loader' }, 
-          { loader: 'css-loader' }, 
+          { loader: 'style-loader' }, // Injeta o css dentro do index.html
+          { loader: 'css-loader' }, // Importação dentro de arquivos .css 
 
         ]
-      } 
+      }, 
+      {
+        test: /.*\.(gif|png|jpe?g)$/i,
+        use: {
+          loader: 'file-loader'
+        }
+      }
     ]
   }
 };

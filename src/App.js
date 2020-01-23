@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css'
 
+import Lake from './assets/lake.jpg'
+
 function App() {
-  return <h1>Hello primeiro componente</h1>
+  return <img src={Lake} width="200px"/>
 }
 
 export default App;
